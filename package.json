@@ -1,0 +1,25 @@
+{
+  "name": "change-the-narrative-website",
+  "version": "1.0.0",
+  "description": "Modern informational website for Change the Narrative nonprofit in Liberia",
+  "main": "index.html",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "serve": "python3 -m http.server 8000",
+    "dev": "npm run watch & npm run serve"
+  },
+  "keywords": [
+    "nonprofit",
+    "liberia",
+    "tailwind",
+    "typescript",
+    "website"
+  ],
+  "author": "Change the Narrative",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  }
+}
