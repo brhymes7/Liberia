@@ -10,6 +10,17 @@ window.addEventListener('load', () => {
 });
 
 // Fade in animation on scroll
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        document.getElementById('loading-screen').style.opacity = '0';
+        document.getElementById('main-content').style.opacity = '1';
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+        }, 500);
+    }, 1500);
+});
+
+// Fade in animation on scroll
 const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -48,15 +59,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Navbar background on scroll
+    // Navbar background and text color on scroll
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
+        const navLinks = nav.querySelectorAll('a');
+        const navTitle = nav.querySelector('h1');
+        const mobileMenuIcon = nav.querySelector('#mobile-menu-btn i');
+        
         if (window.scrollY > 100) {
-            nav.classList.add('bg-black');
-            nav.classList.remove('bg-black/90');
+            navLinks.forEach(link => {
+                link.classList.remove('text-white');
+                link.classList.add('text-black');
+            });
+            if (navTitle) {
+                navTitle.classList.remove('text-white');
+                navTitle.classList.add('text-black');
+            }
+            if (mobileMenuIcon) {
+                mobileMenuIcon.classList.remove('text-white');
+                mobileMenuIcon.classList.add('text-black');
+            }
         } else {
-            nav.classList.add('bg-black/90');
-            nav.classList.remove('bg-black');
+            navLinks.forEach(link => {
+                link.classList.remove('text-white');
+                link.classList.add('text-black');
+            });
+            if (navTitle) {
+                navTitle.classList.remove('text-white');
+                navTitle.classList.add('text-black');
+            }
+            if (mobileMenuIcon) {
+                mobileMenuIcon.classList.remove('text-white');
+                mobileMenuIcon.classList.add('text-black');
+            }
         }
     });
 });
