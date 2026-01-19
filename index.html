@@ -40,9 +40,10 @@
         }
     </script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cooper+Black&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-black">
+<body class="bg-black" style="font-family: 'Cooper Black', serif; font-style: italic;">
     <!-- Loading Screen -->
     <div id="loading-screen" class="fixed inset-0 bg-black flex items-center justify-center z-50">
         <div class="text-center">
@@ -83,28 +84,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-16 relative min-h-screen flex items-center">
-        <div class="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-700 to-secondary-700"></div>
-        <div class="absolute inset-0 bg-center bg-cover bg-no-repeat opacity-20" style="background-image: url('logo.png');"></div>
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-            <div class="max-w-4xl fade-in">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Transforming Lives in 
-                    <span class="gradient-text">Liberia</span>
-                </h1>
-                <p class="text-xl md:text-2xl mb-8 opacity-90 max-w-2xl">
-                    Empowering communities through sustainable development, education, and healthcare initiatives across Liberia.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105 glow">
-                        Get Involved
-                    </button>
-                    <button class="border-2 border-white text-white hover:bg-white hover:text-primary-700 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 hover:scale-105">
-                        Our Story
-                    </button>
-                </div>
-            </div>
+    <!-- Logo Section -->
+    <section id="home" class="pt-16 min-h-screen flex items-center justify-center bg-black p-4">
+        <div class="w-full h-full flex items-center justify-center">
+            <img src="logo.png" alt="Change the Narrative Logo" class="max-w-full max-h-full w-auto h-auto object-contain">
         </div>
     </section>
 
@@ -114,7 +97,7 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-white mb-4">About Change the Narrative</h2>
                 <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Founded in the heart of Liberia, we are dedicated to creating lasting positive change through community-driven initiatives and sustainable development programs.
+                    Founded in the heart of Liberia, a nonprofit organization committed to transforming global perceptions of Liberia while directly supporting communities through education, food programs, and essential resources.
                 </p>
             </div>
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -122,7 +105,7 @@
                     <div class="mb-8">
                         <h3 class="text-2xl font-bold text-white mb-4">Our Mission</h3>
                         <p class="text-gray-300 mb-6">
-                            To empower Liberian communities by providing access to quality education, healthcare, and economic opportunities that create sustainable development and positive social transformation.
+                            To educate, uplift, and empower Liberians while reshaping how the world understands our nation.
                         </p>
                     </div>
                     <div class="space-y-4">
@@ -158,19 +141,19 @@
                 <div class="bg-gray-800 p-8 rounded-2xl">
                     <div class="grid grid-cols-2 gap-8 text-center">
                         <div>
-                            <div class="text-4xl font-bold text-primary-600 mb-2">1,200+</div>
+                            <div class="text-4xl font-bold text-primary-600 mb-2">100+</div>
                             <div class="text-gray-300">Lives Impacted</div>
                         </div>
                         <div>
-                            <div class="text-4xl font-bold text-secondary-500 mb-2">25</div>
+                            <div class="text-4xl font-bold text-secondary-500 mb-2">5</div>
                             <div class="text-gray-300">Communities</div>
                         </div>
                         <div>
-                            <div class="text-4xl font-bold text-accent-500 mb-2">12</div>
+                            <div class="text-4xl font-bold text-accent-500 mb-2">3</div>
                             <div class="text-gray-300">Active Programs</div>
                         </div>
                         <div>
-                            <div class="text-4xl font-bold text-gold-600 mb-2">5</div>
+                            <div class="text-4xl font-bold text-gold-600 mb-2">2</div>
                             <div class="text-gray-300">Years Active</div>
                         </div>
                     </div>
@@ -191,7 +174,7 @@
                     <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-graduation-cap text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Education & Literacy</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Education</h3>
                     <p class="text-gray-600 mb-6">
                         Providing quality education resources, teacher training, and literacy programs to ensure every child has access to learning opportunities.
                     </p>
@@ -204,17 +187,17 @@
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
                     <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-heartbeat text-white text-2xl"></i>
+                        <i class="fas fa-utensils text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Healthcare Access</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Food and Health Relief</h3>
                     <p class="text-gray-600 mb-6">
-                        Improving healthcare delivery through mobile clinics, health education, and community health worker training programs.
+                        Providing essential food assistance and health relief services to communities in need through direct aid and sustainable programs.
                     </p>
                     <ul class="space-y-2 text-gray-600">
-                        <li>• Mobile health clinics</li>
-                        <li>• Preventive care education</li>
-                        <li>• Community health training</li>
-                        <li>• Medical supply distribution</li>
+                        <li>• Emergency food distribution</li>
+                        <li>• Nutritional support programs</li>
+                        <li>• Health relief services</li>
+                        <li>• Community health initiatives</li>
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
@@ -231,59 +214,6 @@
                         <li>• Business development</li>
                         <li>• Market access facilitation</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section id="impact" class="py-20 bg-primary-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Our Impact Stories</h2>
-                <p class="text-xl text-primary-200">Real transformations happening in Liberian communities</p>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <blockquote class="text-2xl italic mb-8 text-primary-100">
-                        "Change the Narrative didn't just build a school in our community - they empowered us to become teachers, leaders, and change-makers ourselves."
-                    </blockquote>
-                    <div class="flex items-center mb-8">
-                        <div class="w-16 h-16 bg-gold-500 rounded-full flex items-center justify-center mr-4">
-                            <span class="text-white font-bold text-lg">MK</span>
-                        </div>
-                        <div>
-                            <div class="font-semibold text-lg">Mary Konneh</div>
-                            <div class="text-primary-300">Community Leader, Monrovia County</div>
-                        </div>
-                    </div>
-                    <div class="bg-primary-800 p-6 rounded-lg">
-                        <h4 class="font-semibold mb-2">Community Transformation Highlights:</h4>
-                        <ul class="space-y-1 text-primary-200">
-                            <li>• 95% increase in school enrollment</li>
-                            <li>• 40 new community health workers trained</li>
-                            <li>• 150+ small businesses supported</li>
-                            <li>• 80% improvement in healthcare access</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="text-center bg-primary-800 p-6 rounded-lg">
-                        <div class="text-4xl font-bold text-gold-500 mb-2">95%</div>
-                        <div class="text-primary-200">School Enrollment Increase</div>
-                    </div>
-                    <div class="text-center bg-primary-800 p-6 rounded-lg">
-                        <div class="text-4xl font-bold text-secondary-400 mb-2">80%</div>
-                        <div class="text-primary-200">Healthcare Access Improvement</div>
-                    </div>
-                    <div class="text-center bg-primary-800 p-6 rounded-lg">
-                        <div class="text-4xl font-bold text-accent-400 mb-2">300+</div>
-                        <div class="text-primary-200">Families Supported</div>
-                    </div>
-                    <div class="text-center bg-primary-800 p-6 rounded-lg">
-                        <div class="text-4xl font-bold text-gold-500 mb-2">60+</div>
-                        <div class="text-primary-200">Community Leaders Trained</div>
-                    </div>
                 </div>
             </div>
         </div>
