@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Change the Narrative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef2f2',
+                            500: '#dc2626',
+                            600: '#b91c1c',
+                            700: '#991b1b',
+                            900: '#7f1d1d'
+                        },
+                        secondary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        },
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bogart:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body class="bg-white" style="font-family: 'Bogart', serif; font-weight: 900; font-style: italic;">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-10 w-auto mr-3">
+                        <h1 class="text-xl font-bold text-black">Change the Narrative</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black hover:text-primary-600 font-semibold">Home</a>
+                    <a href="index.html#about" class="text-black hover:text-primary-600 font-semibold">About</a>
+                    <a href="our-story.html" class="text-black hover:text-primary-600 font-semibold">Our Story</a>
+                    <a href="index.html#programs" class="text-black hover:text-primary-600 font-semibold">Programs</a>
+                    <a href="index.html#contact" class="text-black hover:text-primary-600 font-semibold">Contact</a>
+                    <a href="donate.html" class="bg-primary-500 text-white px-6 py-2 rounded-full hover:bg-primary-600 transition-colors">
+                        Donate Now
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">About</a>
+                <a href="our-story.html" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Our Story</a>
+                <a href="index.html#programs" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Programs</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Contact</a>
+                <a href="donate.html" class="block w-full text-left px-3 py-2 bg-primary-500 text-white rounded hover:bg-primary-600 mt-2">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Donation Section -->
+    <section class="pt-24 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-black mb-6">Make a Donation</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Your contribution helps us transform communities across Liberia through education, healthcare, and economic development.
+                </p>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-2xl">
+                <form id="donation-form" class="space-y-6">
+                    <!-- Currency Selection -->
+                    <div>
+                        <label class="block text-base font-bold text-black mb-4">Select Currency</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-primary-500 transition-colors">
+                                <input type="radio" name="currency" value="usd" class="mr-3" checked>
+                                <div>
+                                    <div class="font-semibold text-black">USD ($)</div>
+                                    <div class="text-sm text-gray-600">US Dollar</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-primary-500 transition-colors">
+                                <input type="radio" name="currency" value="lrd" class="mr-3">
+                                <div>
+                                    <div class="font-semibold text-black">LRD (L$)</div>
+                                    <div class="text-sm text-gray-600">Liberian Dollar</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Donation Amount -->
+                    <div>
+                        <label class="block text-base font-bold text-black mb-4">Donation Amount</label>
+                        <div class="grid grid-cols-3 gap-4 mb-4">
+                            <button type="button" class="preset-amount p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors" data-usd="25" data-lrd="4000">
+                                <span class="amount-display font-semibold">$25</span>
+                            </button>
+                            <button type="button" class="preset-amount p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors" data-usd="50" data-lrd="8000">
+                                <span class="amount-display font-semibold">$50</span>
+                            </button>
+                            <button type="button" class="preset-amount p-4 border-2 border-gray-300 rounded-lg hover:border-primary-500 hover:bg-primary-50 transition-colors" data-usd="100" data-lrd="16000">
+                                <span class="amount-display font-semibold">$100</span>
+                            </button>
+                        </div>
+                        <div class="relative">
+                            <span id="currency-symbol" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-semibold">$</span>
+                            <input type="number" id="custom-amount" placeholder="Enter custom amount" class="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500" min="1">
+                        </div>
+                    </div>
+
+                    <!-- Donor Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-base font-bold text-black mb-2">First Name</label>
+                            <input type="text" id="first-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-base font-bold text-black mb-2">Last Name</label>
+                            <input type="text" id="last-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500" required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-base font-bold text-black mb-2">Email Address</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary-500" required>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div>
+                        <label class="block text-base font-bold text-black mb-4">Payment Information</label>
+                        <div id="card-element" class="p-4 border border-gray-300 rounded-lg bg-white">
+                            <!-- Stripe Elements will create form elements here -->
+                        </div>
+                        <div id="card-errors" role="alert" class="text-red-600 text-sm mt-2"></div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-button" class="w-full bg-primary-500 text-white py-4 rounded-lg hover:bg-primary-600 transition-colors font-semibold text-lg">
+                        <span id="button-text">Donate Now</span>
+                        <span id="spinner" class="hidden">
+                            <i class="fas fa-spinner fa-spin mr-2"></i>Processing...
+                        </span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Impact Information -->
+            <div class="mt-16 grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Education Support</h3>
+                    <p class="text-gray-600">$25 can provide school supplies for one student for a month</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Food Relief</h3>
+                    <p class="text-gray-600">$50 can provide nutritious meals for a family for a week</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-black mb-2">Economic Development</h3>
+                    <p class="text-gray-600">$100 can provide agricultural tools and training for one farmer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-8 w-auto mr-3">
+                        <h3 class="text-xl font-bold">Change the Narrative</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Transforming communities across Liberia through sustainable development, education, and healthcare initiatives.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="our-story.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="index.html#programs" class="hover:text-white transition-colors">Our Programs</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="donate.html" class="hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Partner</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Change the Narrative. All rights reserved. | Transforming communities, one story at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Stripe
+        const stripe = Stripe('pk_test_YOUR_PUBLISHABLE_KEY_HERE'); // Replace with your actual publishable key
+        const elements = stripe.elements();
+
+        // Create card element
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+
+        // Handle currency switching
+        const currencyRadios = document.querySelectorAll('input[name="currency"]');
+        const currencySymbol = document.getElementById('currency-symbol');
+        const presetAmounts = document.querySelectorAll('.preset-amount');
+        const customAmount = document.getElementById('custom-amount');
+
+        currencyRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                const currency = this.value;
+                currencySymbol.textContent = currency === 'usd' ? '$' : 'L$';
+                
+                presetAmounts.forEach(button => {
+                    const amount = button.dataset[currency];
+                    const symbol = currency === 'usd' ? '$' : 'L$';
+                    button.querySelector('.amount-display').textContent = symbol + amount;
+                });
+                
+                customAmount.value = '';
+            });
+        });
+
+        // Handle preset amount selection
+        presetAmounts.forEach(button => {
+            button.addEventListener('click', function() {
+                const currency = document.querySelector('input[name="currency"]:checked').value;
+                const amount = this.dataset[currency];
+                customAmount.value = amount;
+                
+                // Update visual selection
+                presetAmounts.forEach(btn => btn.classList.remove('border-primary-500', 'bg-primary-50'));
+                this.classList.add('border-primary-500', 'bg-primary-50');
+            });
+        });
+
+        // Handle form submission
+        const form = document.getElementById('donation-form');
+        const submitButton = document.getElementById('submit-button');
+        const buttonText = document.getElementById('button-text');
+        const spinner = document.getElementById('spinner');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const amount = customAmount.value;
+            const currency = document.querySelector('input[name="currency"]:checked').value;
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+
+            if (!amount || amount <= 0) {
+                alert('Please enter a valid donation amount.');
+                return;
+            }
+
+            // Show loading state
+            submitButton.disabled = true;
+            buttonText.classList.add('hidden');
+            spinner.classList.remove('hidden');
+
+            try {
+                // Create payment intent on your server
+                const response = await fetch('/create-payment-intent', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        amount: Math.round(amount * 100), // Convert to cents
+                        currency: currency,
+                        donor_name: `${firstName} ${lastName}`,
+                        donor_email: email
+                    }),
+                });
+
+                const { client_secret } = await response.json();
+
+                // Confirm payment
+                const result = await stripe.confirmCardPayment(client_secret, {
+                    payment_method: {
+                        card: cardElement,
+                        billing_details: {
+                            name: `${firstName} ${lastName}`,
+                            email: email,
+                        },
+                    }
+                });
+
+                if (result.error) {
+                    // Show error to customer
+                    document.getElementById('card-errors').textContent = result.error.message;
+                } else {
+                    // Payment succeeded
+                    alert('Thank you for your donation! Your payment has been processed successfully.');
+                    form.reset();
+                    presetAmounts.forEach(btn => btn.classList.remove('border-primary-500', 'bg-primary-50'));
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while processing your donation. Please try again.');
+            }
+
+            // Reset button state
+            submitButton.disabled = false;
+            buttonText.classList.remove('hidden');
+            spinner.classList.add('hidden');
+        });
+
+        // Handle card element errors
+        cardElement.on('change', ({error}) => {
+            const displayError = document.getElementById('card-errors');
+            if (error) {
+                displayError.textContent = error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Change the Narrative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef2f2',
+                            500: '#dc2626',
+                            600: '#b91c1c',
+                            700: '#991b1b',
+                            900: '#7f1d1d'
+                        },
+                        secondary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        },
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bogart:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white" style="font-family: 'Bogart', serif; font-weight: 900; font-style: italic;">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-10 w-auto mr-3">
+                        <h1 class="text-xl font-bold text-black">Change the Narrative</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black hover:text-primary-600 font-semibold">Home</a>
+                    <a href="index.html#about" class="text-black hover:text-primary-600 font-semibold">About</a>
+                    <a href="our-story.html" class="text-primary-600 font-semibold">Our Story</a>
+                    <a href="index.html#programs" class="text-black hover:text-primary-600 font-semibold">Programs</a>
+                    <a href="index.html#contact" class="text-black hover:text-primary-600 font-semibold">Contact</a>
+                    <button class="bg-primary-500 text-white px-6 py-2 rounded-full hover:bg-primary-600 transition-colors">
+                        <a href="donate.html" class="text-white">Donate Now</a>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">About</a>
+                <a href="our-story.html" class="block px-3 py-2 text-primary-600 font-semibold">Our Story</a>
+                <a href="index.html#programs" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Programs</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Contact</a>
+                <a href="donate.html" class="block w-full text-left px-3 py-2 bg-primary-500 text-white rounded hover:bg-primary-600 mt-2">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Our Story Section -->
+    <section class="pt-24 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold text-black mb-6">Our Story</h1>
+                <div class="w-24 h-1 bg-primary-500 mx-auto"></div>
+            </div>
+            
+            <div class="prose prose-lg max-w-none">
+                <div class="bg-gray-50 p-8 rounded-2xl mb-8">
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        I first traveled to Liberia in 2021 during a time when I felt lost and uncertain about my purpose. What I found was more than a country — I found clarity, connection, and a calling.
+                    </p>
+                    
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        Though I was born in the United States, Liberia has always been part of me. I was conceived there, and my mother fled during the civil war while pregnant, sacrificing everything so I could be born into safety while still rooted in our culture.
+                    </p>
+                    
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        Returning to the motherland changed me.
+                    </p>
+                    
+                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                        Each visit strengthened my love for my people and deepened my desire to serve. I witnessed hardship, but I also witnessed strength, joy, brilliance, and untapped potential.
+                    </p>
+                    
+                    <p class="text-xl text-primary-600 font-semibold leading-relaxed">
+                        Change The Narrative: Liberia was born from that awakening.
+                    </p>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="index.html#contact" class="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors font-semibold">
+                        Join Our Mission
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-black mb-4">Our Journey in Pictures</h2>
+                <p class="text-xl text-gray-600">Moments that shaped our mission and connection to Liberia</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="story-1.jpg" alt="First visit to Liberia" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">First Steps</h3>
+                        <p class="text-gray-600">My first journey to Liberia in 2021 - discovering purpose and connection</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="story-2.jpg" alt="Community engagement" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Community Connection</h3>
+                        <p class="text-gray-600">Meeting the people who would inspire our mission</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="story-3.jpg" alt="Cultural heritage" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Roots & Heritage</h3>
+                        <p class="text-gray-600">Embracing the culture and heritage that shaped my identity</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="story-4.jpg" alt="Community work" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Taking Action</h3>
+                        <p class="text-gray-600">Beginning our work to support communities across Liberia</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="story-5.jpg" alt="Hope and potential" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">Strength & Joy</h3>
+                        <p class="text-gray-600">Witnessing the resilience and untapped potential of our people</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="story-6.jpg" alt="Change the Narrative birth" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-black mb-2">The Awakening</h3>
+                        <p class="text-gray-600">The moment Change The Narrative: Liberia was born</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-8 w-auto mr-3">
+                        <h3 class="text-xl font-bold">Change the Narrative</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Transforming communities across Liberia through sustainable development, education, and healthcare initiatives.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="our-story.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="index.html#programs" class="hover:text-white transition-colors">Our Programs</a></li>
+                        <li><a href="index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Volunteer</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Donate</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Partner</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Change the Narrative. All rights reserved. | Transforming communities, one story at a time.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
