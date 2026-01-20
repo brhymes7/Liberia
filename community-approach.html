@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community-Centered Approach - Change the Narrative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef2f2',
+                            500: '#dc2626',
+                            600: '#b91c1c',
+                            700: '#991b1b',
+                            900: '#7f1d1d'
+                        },
+                        secondary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        },
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bogart:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white" style="font-family: 'Bogart', serif; font-weight: 900; font-style: italic;">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-10 w-auto mr-3">
+                        <h1 class="text-xl font-bold text-black">Change the Narrative</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black hover:text-primary-600 font-semibold">Home</a>
+                    <a href="index.html#about" class="text-black hover:text-primary-600 font-semibold">About</a>
+                    <a href="our-story.html" class="text-black hover:text-primary-600 font-semibold">Our Story</a>
+                    <a href="index.html#programs" class="text-black hover:text-primary-600 font-semibold">Programs</a>
+                    <a href="index.html#contact" class="text-black hover:text-primary-600 font-semibold">Contact</a>
+                    <a href="donate.html" class="bg-primary-500 text-white px-6 py-2 rounded-full hover:bg-primary-600 transition-colors">
+                        Donate Now
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Community-Centered Approach Section -->
+    <section class="pt-24 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-heart text-white text-3xl"></i>
+                </div>
+                <h1 class="text-5xl font-bold text-black mb-6">Community-Centered Approach</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Working directly with local leaders and communities to ensure sustainable, culturally-appropriate solutions.
+                </p>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="space-y-12">
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold text-black mb-6">Our Philosophy</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        True change comes from within communities. We believe that the people who live in these communities understand their needs, challenges, and strengths better than anyone else. Our role is to listen, support, and amplify their voices.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        By partnering with local leaders, traditional authorities, and community members, we ensure that our programs are not only effective but also culturally sensitive and sustainable.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Community Engagement</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Regular community meetings and consultations</li>
+                            <li>• Participatory planning and decision-making</li>
+                            <li>• Cultural sensitivity training for staff</li>
+                            <li>• Local language communication</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Local Leadership</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Partnership with traditional leaders</li>
+                            <li>• Youth leadership development</li>
+                            <li>• Women's empowerment initiatives</li>
+                            <li>• Community committee formation</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Cultural Respect</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Honoring traditional practices</li>
+                            <li>• Incorporating local knowledge</li>
+                            <li>• Respecting community values</li>
+                            <li>• Celebrating local culture</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Capacity Building</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Training local staff and volunteers</li>
+                            <li>• Skill development programs</li>
+                            <li>• Knowledge transfer initiatives</li>
+                            <li>• Community ownership development</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-primary-50 p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold text-black mb-6">Why This Matters</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-4">Sustainability</h3>
+                            <p class="text-gray-700">Programs designed with community input are more likely to continue after external support ends.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-4">Effectiveness</h3>
+                            <p class="text-gray-700">Solutions that address real community needs and leverage local strengths achieve better results.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-4">Ownership</h3>
+                            <p class="text-gray-700">When communities lead their own development, they take pride and responsibility for outcomes.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-black mb-4">Dignity</h3>
+                            <p class="text-gray-700">Respecting community knowledge and leadership preserves dignity and builds trust.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-black mb-6">Join Our Community-Centered Mission</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Support programs that truly serve and empower Liberian communities.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="donate.html" class="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors font-semibold button-hover">
+                            Support Communities
+                        </a>
+                        <a href="index.html#contact" class="border border-primary-500 text-primary-600 px-8 py-3 rounded-full hover:bg-primary-50 transition-colors font-semibold">
+                            Get Involved
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2024 Change the Narrative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

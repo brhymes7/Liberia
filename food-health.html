@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Health Relief - Change the Narrative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef2f2',
+                            500: '#dc2626',
+                            600: '#b91c1c',
+                            700: '#991b1b',
+                            900: '#7f1d1d'
+                        },
+                        secondary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        },
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bogart:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white" style="font-family: 'Bogart', serif; font-weight: 900; font-style: italic;">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-10 w-auto mr-3">
+                        <h1 class="text-xl font-bold text-black">Change the Narrative</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black hover:text-primary-600 font-semibold">Home</a>
+                    <a href="index.html#about" class="text-black hover:text-primary-600 font-semibold">About</a>
+                    <a href="our-story.html" class="text-black hover:text-primary-600 font-semibold">Our Story</a>
+                    <a href="index.html#programs" class="text-secondary-600 font-semibold">Programs</a>
+                    <a href="index.html#contact" class="text-black hover:text-primary-600 font-semibold">Contact</a>
+                    <a href="donate.html" class="bg-primary-500 text-white px-6 py-2 rounded-full hover:bg-primary-600 transition-colors">
+                        Donate Now
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Food & Health Relief Section -->
+    <section class="pt-24 pb-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="w-20 h-20 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-utensils text-white text-3xl"></i>
+                </div>
+                <h1 class="text-5xl font-bold text-black mb-6">Food & Health Relief</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Providing essential nutrition and healthcare services to communities in need through direct aid and sustainable programs.
+                </p>
+                <div class="w-24 h-1 bg-secondary-500 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="space-y-12">
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold text-black mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        Access to nutritious food and basic healthcare is a fundamental human right. Our food and health relief program addresses immediate needs while building long-term capacity for communities to achieve food security and improved health outcomes.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        We partner with local healthcare providers, community leaders, and agricultural cooperatives to create comprehensive solutions that address both emergency needs and sustainable development.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Emergency Food Distribution</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Rice, beans, and essential staples</li>
+                            <li>• Nutritional supplements for children</li>
+                            <li>• Emergency food packages for families</li>
+                            <li>• Community kitchen programs</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Health Services</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Mobile health clinics</li>
+                            <li>• Maternal and child health programs</li>
+                            <li>• Vaccination campaigns</li>
+                            <li>• Health education workshops</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Nutrition Programs</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• School feeding programs</li>
+                            <li>• Malnutrition screening and treatment</li>
+                            <li>• Nutrition education for mothers</li>
+                            <li>• Community gardens and farming</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold text-black mb-4">Water & Sanitation</h3>
+                        <ul class="space-y-3 text-gray-600">
+                            <li>• Clean water access projects</li>
+                            <li>• Sanitation facility construction</li>
+                            <li>• Hygiene education programs</li>
+                            <li>• Water quality testing and treatment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-secondary-50 p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold text-black mb-6">Impact & Results</h2>
+                    <div class="grid md:grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-4xl font-bold text-secondary-600 mb-2">500+</div>
+                            <div class="text-gray-700">Families Fed</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-secondary-600 mb-2">1,200+</div>
+                            <div class="text-gray-700">Health Consultations</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-secondary-600 mb-2">8</div>
+                            <div class="text-gray-700">Communities Served</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-black mb-6">Get Involved</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Help us provide essential food and healthcare to those who need it most.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="donate.html" class="bg-secondary-500 text-white px-8 py-3 rounded-full hover:bg-secondary-600 transition-colors font-semibold button-hover">
+                            Support Relief Efforts
+                        </a>
+                        <a href="index.html#contact" class="border border-secondary-500 text-secondary-600 px-8 py-3 rounded-full hover:bg-secondary-50 transition-colors font-semibold">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2024 Change the Narrative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

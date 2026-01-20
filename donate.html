@@ -60,6 +60,7 @@
                     <a href="index.html" class="text-black hover:text-primary-600 font-semibold">Home</a>
                     <a href="index.html#about" class="text-black hover:text-primary-600 font-semibold">About</a>
                     <a href="our-story.html" class="text-black hover:text-primary-600 font-semibold">Our Story</a>
+                    <a href="gallery.html" class="text-black hover:text-primary-600 font-semibold">Gallery</a>
                     <a href="index.html#programs" class="text-black hover:text-primary-600 font-semibold">Programs</a>
                     <a href="index.html#contact" class="text-black hover:text-primary-600 font-semibold">Contact</a>
                     <a href="donate.html" class="bg-primary-500 text-white px-6 py-2 rounded-full hover:bg-primary-600 transition-colors">
@@ -101,6 +102,56 @@
             
             <div class="bg-gray-50 p-8 rounded-2xl">
                 <form id="donation-form" class="space-y-6">
+                    <!-- Program Selection -->
+                    <div>
+                        <label class="block text-base font-bold text-black mb-4">Choose Program to Support</label>
+                        <div class="grid grid-cols-1 gap-4">
+                            <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-primary-500 transition-colors">
+                                <input type="radio" name="program" value="general" class="mr-3" checked>
+                                <div>
+                                    <div class="font-semibold text-black">General Fund</div>
+                                    <div class="text-sm text-gray-600">Support all programs where needed most</div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-primary-500 transition-colors">
+                                <input type="radio" name="program" value="education" class="mr-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-graduation-cap text-white text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-black">Education Program</div>
+                                        <div class="text-sm text-gray-600">School supplies, teacher training, literacy programs</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-secondary-500 transition-colors">
+                                <input type="radio" name="program" value="food-health" class="mr-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-secondary-500 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-utensils text-white text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-black">Food & Health Relief</div>
+                                        <div class="text-sm text-gray-600">Emergency food, health services, nutrition programs</div>
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-accent-500 transition-colors">
+                                <input type="radio" name="program" value="economic" class="mr-3">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 bg-accent-500 rounded-full flex items-center justify-center mr-3">
+                                        <i class="fas fa-seedling text-white text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-black">Economic Development</div>
+                                        <div class="text-sm text-gray-600">Agricultural training, microfinance, business support</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
                     <!-- Currency Selection -->
                     <div>
                         <label class="block text-base font-bold text-black mb-4">Select Currency</label>
@@ -311,6 +362,7 @@
 
             const amount = customAmount.value;
             const currency = document.querySelector('input[name="currency"]:checked').value;
+            const program = document.querySelector('input[name="program"]:checked').value;
             const firstName = document.getElementById('first-name').value;
             const lastName = document.getElementById('last-name').value;
             const email = document.getElementById('email').value;
@@ -335,6 +387,7 @@
                     body: JSON.stringify({
                         amount: Math.round(amount * 100), // Convert to cents
                         currency: currency,
+                        program: program,
                         donor_name: `${firstName} ${lastName}`,
                         donor_email: email
                     }),

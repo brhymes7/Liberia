@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Change the Narrative</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#fef2f2',
+                            500: '#dc2626',
+                            600: '#b91c1c',
+                            700: '#991b1b',
+                            900: '#7f1d1d'
+                        },
+                        secondary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8'
+                        },
+                        accent: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d'
+                        },
+                        gold: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bogart:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-white" style="font-family: 'Bogart', serif; font-weight: 900; font-style: italic;">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img src="logo.png" alt="Change the Narrative Logo" class="h-10 w-auto mr-3">
+                        <h1 class="text-xl font-bold text-black">Change the Narrative</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black hover:text-primary-600 font-semibold">Home</a>
+                    <a href="index.html#about" class="text-black hover:text-primary-600 font-semibold">About</a>
+                    <a href="our-story.html" class="text-black hover:text-primary-600 font-semibold">Our Story</a>
+                    <a href="index.html#programs" class="text-black hover:text-primary-600 font-semibold">Programs</a>
+                    <a href="index.html#contact" class="text-black hover:text-primary-600 font-semibold">Contact</a>
+                    <a href="donate.html" class="bg-primary-500 text-white px-6 py-2 rounded-full hover:bg-primary-600 transition-colors">
+                        Donate Now
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-black">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Home</a>
+                <a href="index.html#about" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">About</a>
+                <a href="our-story.html" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Our Story</a>
+                <a href="index.html#programs" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Programs</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-black hover:text-primary-600 font-semibold">Contact</a>
+                <a href="donate.html" class="block w-full text-left px-3 py-2 bg-primary-500 text-white rounded hover:bg-primary-600 mt-2">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="pt-24 pb-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold text-black mb-6">Photo Gallery</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Capturing moments of hope, transformation, and community impact across Liberia
+                </p>
+                <div class="w-24 h-1 bg-primary-500 mx-auto mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section class="pb-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-4">Our Journey</h2>
+                <p class="text-lg text-gray-600">From first steps to lasting impact</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="story-1.jpg" alt="First visit to Liberia" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black mb-2">First Steps</h3>
+                        <p class="text-gray-600 text-sm">My first journey to Liberia in 2021</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="story-2.jpg" alt="Community engagement" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black mb-2">Community Connection</h3>
+                        <p class="text-gray-600 text-sm">Meeting inspiring community leaders</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="story-3.jpg" alt="Cultural heritage" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black mb-2">Roots & Heritage</h3>
+                        <p class="text-gray-600 text-sm">Embracing Liberian culture and identity</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="story-4.jpg" alt="Community work" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black mb-2">Taking Action</h3>
+                        <p class="text-gray-600 text-sm">Beginning our community work</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="story-5.jpg" alt="Hope and potential" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black mb-2">Strength & Joy</h3>
+                        <p class="text-gray-600 text-sm">Witnessing community resilience</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="story-6.jpg" alt="Change the Narrative birth" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-black mb-2">The Awakening</h3>
+                        <p class="text-gray-600 text-sm">Birth of Change The Narrative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Program Photos -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-4">Education in Action</h2>
+                <p class="text-lg text-gray-600">Transforming lives through learning</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="education-1.jpg" alt="Students in classroom" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Students engaged in learning</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="education-2.jpg" alt="Teacher training" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Teacher development workshop</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="education-3.jpg" alt="School supplies distribution" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Distributing school supplies</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="education-4.jpg" alt="Adult literacy class" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Adult literacy program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Programs -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-4">Community Impact</h2>
+                <p class="text-lg text-gray-600">Building stronger, healthier communities</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="health-1.jpg" alt="Health clinic" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Mobile health clinic services</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="food-1.jpg" alt="Food distribution" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Community food program</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="economic-1.jpg" alt="Agricultural training" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Agricultural skills training</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="community-1.jpg" alt="Community meeting" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Community leadership meeting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- People & Culture -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-black mb-4">People & Culture</h2>
+                <p class="text-lg text-gray-600">Celebrating the spirit of Liberia</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="culture-1.jpg" alt="Traditional ceremony" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Traditional cultural ceremony</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="culture-2.jpg" alt="Community celebration" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Community celebration</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="culture-3.jpg" alt="Local artisans" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Local artisans at work</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="culture-4.jpg" alt="Youth activities" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Youth engagement activities</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="culture-5.jpg" alt="Women's group" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Women's empowerment group</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow card-hover">
+                    <img src="culture-6.jpg" alt="Community leaders" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Community leaders gathering</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-black mb-6">Be Part of Our Story</h2>
+            <p class="text-lg text-gray-600 mb-8">
+                Help us create more moments of hope and transformation in Liberian communities.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="donate.html" class="bg-primary-500 text-white px-8 py-3 rounded-full hover:bg-primary-600 transition-colors font-semibold button-hover">
+                    Support Our Work
+                </a>
+                <a href="index.html#contact" class="border border-primary-500 text-primary-600 px-8 py-3 rounded-full hover:bg-primary-50 transition-colors font-semibold">
+                    Get Involved
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-400">&copy; 2024 Change the Narrative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
